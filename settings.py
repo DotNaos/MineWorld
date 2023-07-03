@@ -1,9 +1,15 @@
 import math
-
+import numpy as np
 import glm
 
 # resolution
 WIN_RES = glm.vec2(1600, 900)
+
+# chunk
+CHUNK_SIZE = 32
+H_CHUNK_SIZE = CHUNK_SIZE // 2
+CHUNK_AREA = CHUNK_SIZE * CHUNK_SIZE
+CHUNK_VOL = CHUNK_AREA * CHUNK_SIZE
 
 # camera
 APECT_RATIO = WIN_RES.x / WIN_RES.y
