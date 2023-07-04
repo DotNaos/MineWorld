@@ -5,7 +5,7 @@ class BaseMesh:
     def __init__(self):
         # OpenGL context
         self.ctx = None
-        # Shader program
+        # shader program
         self.program = None
         # vertex buffer data type format: "3f 3f"
         self.vbo_format = None
@@ -26,3 +26,47 @@ class BaseMesh:
 
     def render(self):
         self.vao.render()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
