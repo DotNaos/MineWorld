@@ -36,7 +36,7 @@ class Player(Camera):
         key_state = pg.key.get_pressed()
         vel = PLAYER_SPEED * self.app.delta_time
 
-        if key_state[pg.K_LSHIFT]:
+        if key_state[pg.K_LCTRL]:
             vel *= 5
 
         if key_state[pg.K_w]:
@@ -49,5 +49,5 @@ class Player(Camera):
             self.move_right(vel)
         if key_state[pg.K_q] or key_state[pg.K_SPACE]:
             self.move_up(vel)
-        if key_state[pg.K_e]:
+        if key_state[pg.K_e] or key_state[pg.K_LSHIFT]:
             self.move_down(vel)
