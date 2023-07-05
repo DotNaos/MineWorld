@@ -11,14 +11,13 @@ from textures import Textures
 class VoxelEngine:
     def __init__(self):
         pg.init()
-        pg.display.gl_set_attribute(pg.GL_CONTEXT_MAJOR_VERSION, 3)
-        pg.display.gl_set_attribute(pg.GL_CONTEXT_MINOR_VERSION, 3)
+        pg.display.gl_set_attribute(pg.GL_CONTEXT_MAJOR_VERSION, MAJOR_VER)
+        pg.display.gl_set_attribute(pg.GL_CONTEXT_MINOR_VERSION, MINOR_VER)
         pg.display.gl_set_attribute(pg.GL_CONTEXT_PROFILE_MASK, pg.GL_CONTEXT_PROFILE_CORE)
-        pg.display.gl_set_attribute(pg.GL_DEPTH_SIZE, 24)
+        pg.display.gl_set_attribute(pg.GL_DEPTH_SIZE, DEPTH_SIZE)
+        pg.display.gl_set_attribute(pg.GL_MULTISAMPLESAMPLES, NUM_SAMPLES)
 
-        # set fullscreen
-        pg.display.set_mode(WIN_RES, flags=pg.DOUBLEBUF | pg.OPENGL)
-
+        pg.display.set_mode(WIN_RES, flags=pg.OPENGL | pg.DOUBLEBUF)
         self.ctx = mgl.create_context()
 
         self.ctx.enable(flags=mgl.DEPTH_TEST | mgl.CULL_FACE | mgl.BLEND)
@@ -39,7 +38,6 @@ class VoxelEngine:
         self.player = Player(self)
         self.shader_program = ShaderProgram(self)
         self.scene = Scene(self)
-
 
     def update(self):
         self.player.update()

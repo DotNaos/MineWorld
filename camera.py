@@ -1,6 +1,7 @@
 from settings import *
 from frustum import Frustum
 
+
 class Camera:
     def __init__(self, position, yaw, pitch):
         self.position = glm.vec3(position)
@@ -33,6 +34,7 @@ class Camera:
 
         self.up = glm.vec3(0, 1, 0)
         # self.up = glm.normalize(glm.cross(self.right, self.forward))
+
 
     def rotate_pitch(self, delta_y):
         self.pitch -= delta_y

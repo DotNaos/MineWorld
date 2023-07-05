@@ -54,12 +54,12 @@ def pack_data(x, y, z, voxel_id, face_id, ao_id, flip_id):
     bcdefg_bit = b_bit + cdefg_bit
 
     packed_data = (
-            a << bcdefg_bit |
-            b << cdefg_bit |
-            c << defg_bit |
-            d << efg_bit |
-            e << fg_bit |
-            f << g_bit | g
+        a << bcdefg_bit |
+        b << cdefg_bit |
+        c << defg_bit |
+        d << efg_bit |
+        e << fg_bit |
+        f << g_bit | g
     )
     return packed_data
 
