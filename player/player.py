@@ -1,6 +1,6 @@
 import pygame as pg
-from camera import Camera
-from settings import *
+from player.camera import Camera
+from util.settings import *
 
 
 class Player(Camera):

@@ -1,5 +1,5 @@
-from settings import *
-from frustum import Frustum
+from util.settings import *
+from world.frustum import Frustum
 
 
 class Camera:

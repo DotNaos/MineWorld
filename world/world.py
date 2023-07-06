@@ -1,6 +1,6 @@
-from settings import *
-from world_objects.chunk import Chunk
-from voxel_handler import VoxelHandler
+from util.settings import *
+from world.world_objects.chunk import Chunk
+from world.voxel_handler import VoxelHandler
 
 
 class World:

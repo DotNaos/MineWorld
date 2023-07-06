@@ -1,5 +1,4 @@
-from settings import *
-from numba import uint8
+from util.settings import *
 
 
 @njit

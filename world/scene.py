@@ -1,9 +1,8 @@
-from settings import *
 import moderngl as mgl
-from world import World
-from world_objects.voxel_marker import VoxelMarker
-from world_objects.water import Water
-from world_objects.clouds import Clouds
+from world.world import World
+from world.world_objects.voxel_marker import VoxelMarker
+from world.world_objects.water import Water
+from world.world_objects.clouds import Clouds
 
 
 class Scene:

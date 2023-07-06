@@ -1,7 +1,6 @@
-from settings import *
 from meshes.chunk_mesh import ChunkMesh
-import random
-from terrain_gen import *
+from world.terrain_gen import set_voxel_id, get_height
+from world.world import *
 
 
 class Chunk:
